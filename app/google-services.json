@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "388446669893",
+    "firebase_url": "https://blooddonationfirebase-d1076-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "blooddonationfirebase-d1076",
+    "storage_bucket": "blooddonationfirebase-d1076.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:388446669893:android:de526c0a6e6e4794c8e72c",
+        "android_client_info": {
+          "package_name": "tarc.edu.latestblooddonation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "388446669893-3a5lpk3ibaa7vjrjktm1esvvvmlccabt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNqBx_V8tT32eD5hVLbym0JycWjQBj-zI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "388446669893-3a5lpk3ibaa7vjrjktm1esvvvmlccabt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

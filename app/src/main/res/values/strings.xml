@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">LatestBloodDonation</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_aboutUs">About Us</string>
+    <string name="menu_logOut">Log Out</string>
+    <string name="aboutUs"> We organize this Persona Blood Donation hospital is to help the patients who need of surgery,
+                            cancer treatment and transfusions for blood loss from traumatic injuries. The main purpose
+                            is to ensure healthy lives and promote well-being for all at all ages. Currently, we have
+                            created this mobile app for the blood donor to donate their blood. Blood donor can easily
+                            make their appointment through this app. Blood donor will also receive many blood donation
+                            appointment from this app. It will only shown the blood type request that is suitable for
+                            the blood donor.  </string>
+    <string name="createDonorRequest">Create</string>
+    <string name="deleteDonorRequest">Delete</string>
+    <string name="editDonorRequest">Edit</string>
+    <string name="viewDonorRequest">View</string>
+
+</resources>
