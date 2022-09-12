@@ -1,7 +1,6 @@
-package tarc.edu.latestblooddonation.ui
+package tarc.edu.latestblooddonation.model
 
 data class DonorRequestModel(
-    var donorRequestId: String? = null,
     var patientName:String? = null,
     var bloodType:String? = null,
     var description:String? = null

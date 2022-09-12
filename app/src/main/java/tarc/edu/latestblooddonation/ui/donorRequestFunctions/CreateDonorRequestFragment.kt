@@ -4,15 +4,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import android.widget.Toast
-import androidx.core.view.isEmpty
 import androidx.fragment.app.Fragment
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 import tarc.edu.latestblooddonation.databinding.FragmentCreateDonorRequestBinding
-import tarc.edu.latestblooddonation.ui.DonorRequestModel
+import tarc.edu.latestblooddonation.model.DonorRequestModel
 
 
 class CreateDonorRequestFragment : Fragment() {
@@ -46,28 +44,20 @@ class CreateDonorRequestFragment : Fragment() {
             if (patientName.isEmpty()){
                 binding.editTextPatientName.error = "Please enter name"
             }
-            if (bloodGroup.isEmpty()) {
-                val errorText = binding.spinnerBloodTypes.selectedView as TextView
-                errorText.error = "Please select a blood type"
-            }
             if (description.isEmpty()){
                 binding.editTextDescription.error = "Please enter description"
             }
 
-            val db =  Firebase.database("https://blooddonationfirebase-d1076-default-rtdb.asia-southeast1.firebasedatabase.app/")
-            val ref = db.getReference("Donor Requests")
-            val donorRequestId = ref.push().key!!
+            val dbRef =  Firebase.database("https://blooddonationfirebase-d1076-default-rtdb.asia-southeast1.firebasedatabase.app/").getReference("Donor Requests")
             val donorRequest = DonorRequestModel(patientName, bloodGroup, description)
-            ref.child(donorRequestId).setValue(donorRequest).addOnSuccessListener {
+            dbRef.child(patientName).setValue(donorRequest).addOnSuccessListener {
+                binding.editTextPatientName.text.clear()
+                binding.editTextDescription.text.clear()
+
                 Toast.makeText(context, "Successful", Toast.LENGTH_LONG).show()
             }.addOnFailureListener{
                 Toast.makeText(context, "Failed", Toast.LENGTH_LONG).show()
             }
-        }
-
-        binding.buttonClear.setOnClickListener{
-            binding.editTextPatientName.text.clear()
-            binding.editTextDescription.text.clear()
         }
     }
 }
